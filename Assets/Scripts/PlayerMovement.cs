@@ -28,10 +28,10 @@ public class PlayerMovement : MonoBehaviour
                 if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), 0.2f, Boundary)){
                 movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
                 }
-            }else if(Input.GetAxisRaw("Vertical")== 1f){
+            /*}else if(Input.GetAxisRaw("Vertical")== 1f){
                 if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f,Input.GetAxisRaw("Vertical"), 0f), 0.2f, Boundary)){ 
                 movePoint.position += new Vector3(0f,Input.GetAxisRaw("Vertical"), 0f);
-                }
+                }*/
             }
         }
     }
