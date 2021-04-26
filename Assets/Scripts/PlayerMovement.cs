@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public float moveSpeed = 5f;    //Movespeed of the player
+    public float moveSpeed = 2f;    //Movespeed of the player
     public Transform movePoint;     //The point on the grid the player is moving towards
     [SerializeField] private LayerMask boundaryFloor;      //check if there is a boundary
     [SerializeField] private LayerMask deathFloor;
@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
         dead = false;
         movePoint.parent = null;
         isGrounded = true;
-        timeFlow = 3;
+        timeFlow = 1;
         isMoving = false;
     }
 
@@ -42,12 +42,12 @@ public class PlayerMovement : MonoBehaviour
 
         if(timeFlow == 0){
             isMoving = false;
-            timeFlow = 3;
+            timeFlow = 1;
         }
         
         
         Debug.Log(isGrounded);
-        Debug.Log(timeFlow);
+        //Debug.Log(timeFlow);
 
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
 
@@ -64,11 +64,11 @@ public class PlayerMovement : MonoBehaviour
                 }*/
             }else{
                 isMoving = false;
-                timeFlow = 3;
+                timeFlow = 1;
             }
         }
 
-        if(!isGrounded && timeFlow == 3){
+        if(!isGrounded && timeFlow == 1){
             timeFlow -= Time.deltaTime;
             isMoving = true;
             FallDown();

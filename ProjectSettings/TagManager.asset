@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Entity
   - death
+  - boxFloor
+  - Floor
   layers:
   - Default
   - TransparentFX

@@ -16,6 +16,13 @@ public class GameBehavior : MonoBehaviour
         if(player.dead){
             GameOver();
         }
+
+        /*if(player.isMoving){
+            foreach(GameObject E in Entities){
+                Debug.Log("Moving");
+                E.GetComponent<EntityMovement>().MovePhysics();
+            }
+        }*/
     }
     
 }
