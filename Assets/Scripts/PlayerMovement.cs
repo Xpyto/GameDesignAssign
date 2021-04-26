@@ -5,46 +5,97 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public float moveSpeed = 5f;    //Movespeed of the player
+    public float moveSpeed = 2f;    //Movespeed of the player
     public Transform movePoint;     //The point on the grid the player is moving towards
-    public LayerMask Boundary;      //check if there is a boundary
-    public int checkGround;
+    [SerializeField] private LayerMask boundaryFloor;      //check if there is a boundary
+    [SerializeField] private LayerMask deathFloor;
+    float timeFlow;
+
+    public bool isMoving;
+
+    public bool isGrounded;
+
+    public bool dead;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        dead = false;
         movePoint.parent = null;
-        checkGround = 0;
-        
+        isGrounded = true;
+        timeFlow = 1;
+        isMoving = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
-
-        if(Vector3.Distance(transform.position, movePoint.position) <= 0.01f){
-
-            if(checkGround == 2){
-                movePoint.position -= new Vector3(0f,1f,0f);
-            }
-             else if(Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f){
-                if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), 0.2f, Boundary)){
-                movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
-                }
-            }else if(Input.GetAxisRaw("Vertical")== 1f){
-                if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f,Input.GetAxisRaw("Vertical"), 0f), 0.2f, Boundary)){ 
-                movePoint.position += new Vector3(0f,Input.GetAxisRaw("Vertical"), 0f);
-                }
+        if(!dead){
+        if(isMoving){
+            if(timeFlow > 0){
+                timeFlow -= Time.deltaTime;
+            }else{
+                timeFlow = 0;
             }
         }
 
+        if(timeFlow == 0){
+            isMoving = false;
+            timeFlow = 1;
+        }
+        
+        
+        Debug.Log(isGrounded);
+        //Debug.Log(timeFlow);
+
+        transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
+
+        if(Vector3.Distance(transform.position, movePoint.position) <= 0.01f && isGrounded){
+
+            if(Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f){
+                if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), 0.2f, boundaryFloor)){
+                movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
+                isMoving = true;
+                }
+            /*}else if(Input.GetAxisRaw("Vertical")== 1f){
+                if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f,Input.GetAxisRaw("Vertical"), 0f), 0.2f, Boundary)){ 
+                movePoint.position += new Vector3(0f,Input.GetAxisRaw("Vertical"), 0f);
+                }*/
+            }else{
+                isMoving = false;
+                timeFlow = 1;
+            }
+        }
+
+        if(!isGrounded && timeFlow == 1){
+            timeFlow -= Time.deltaTime;
+            isMoving = true;
+            FallDown();
+            
+        }
+        }
+
+        
     }
 
-    void OnCollisionEnter2D(Collision2D collision){
-        Debug.Log(collision.collider.name);
+    public void FallDown(){
+        
+        movePoint.position -= new Vector3(0f,1f, 0f);
+        
     }
 
-    
+    private void OnTriggerStay2D(Collider2D collider){
+        isGrounded = (collider != null && (((1 << collider.gameObject.layer) & boundaryFloor) != 0));
+        
+    }
+    private void OnTriggerExit2D(Collider2D collision){
+        isGrounded = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider){
+        if(collider.gameObject.CompareTag("death")){
+            dead = true;
+        }
+    }
 }
