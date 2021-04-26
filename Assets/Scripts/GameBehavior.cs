@@ -13,6 +13,7 @@ public class GameBehavior : MonoBehaviour
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     void Update(){
         if(player.dead){
             GameOver();
@@ -24,6 +25,10 @@ public class GameBehavior : MonoBehaviour
                 E.GetComponent<EntityMovement>().MovePhysics();
             }
         }*/
+=======
+    void TimeMove(){
+        
+>>>>>>> parent of ce01eff (PlayerMechanics)
 =======
     void TimeMove(){
         

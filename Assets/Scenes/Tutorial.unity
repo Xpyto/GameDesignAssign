@@ -510,6 +510,7 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &617751467
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,6 +862,8 @@ Tilemap:
     e33: 1
 =======
 >>>>>>> parent of ce01eff (PlayerMechanics)
+=======
+>>>>>>> parent of ce01eff (PlayerMechanics)
 --- !u!1 &675276988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,7 +1090,11 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Offset: {x: -6.552216, y: -4.4919796}
+=======
+  m_Offset: {x: -6.5401497, y: -4.5426702}
+>>>>>>> parent of ce01eff (PlayerMechanics)
 =======
   m_Offset: {x: -6.5401497, y: -4.5426702}
 >>>>>>> parent of ce01eff (PlayerMechanics)
@@ -1102,7 +1109,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Size: {x: 6.895568, y: 5.016041}
+=======
+  m_Size: {x: 6.919701, y: 4.9146595}
+>>>>>>> parent of ce01eff (PlayerMechanics)
 =======
   m_Size: {x: 6.919701, y: 4.9146595}
 >>>>>>> parent of ce01eff (PlayerMechanics)
@@ -1939,6 +1950,7 @@ Transform:
   m_PrefabInstance: {fileID: 6082576360321594548}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &1800086618 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6082576361214200743, guid: ed456433db669974093b05535978ecc9,
@@ -1952,6 +1964,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 =======
+=======
+>>>>>>> parent of ce01eff (PlayerMechanics)
 --- !u!50 &1800086620
 Rigidbody2D:
   serializedVersion: 4
@@ -2064,6 +2078,7 @@ Tilemap:
   m_Enabled: 1
   m_Tiles:
   - first: {x: -10, y: -7, z: 0}
+<<<<<<< HEAD
     second:
       serializedVersion: 2
       m_TileIndex: 0
@@ -2174,6 +2189,126 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741826
   - first: {x: -6, y: -6, z: 0}
+=======
+>>>>>>> parent of ce01eff (PlayerMechanics)
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 5
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
+  - first: {x: -9, y: -7, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
+  - first: {x: -8, y: -7, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+<<<<<<< HEAD
+      m_TileSpriteIndex: 6
+=======
+      m_TileSpriteIndex: 1
+>>>>>>> parent of ce01eff (PlayerMechanics)
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
+<<<<<<< HEAD
+  - first: {x: -10, y: -5, z: 0}
+=======
+  - first: {x: -7, y: -7, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
+  - first: {x: -6, y: -7, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
+  - first: {x: -5, y: -7, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
+  - first: {x: -4, y: -7, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
+  - first: {x: -10, y: -6, z: 0}
+>>>>>>> parent of ce01eff (PlayerMechanics)
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
+  - first: {x: -9, y: -6, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
+  - first: {x: -8, y: -6, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
+  - first: {x: -7, y: -6, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
+  - first: {x: -6, y: -6, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 0
@@ -2203,6 +2338,8 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741826
+<<<<<<< HEAD
+=======
   - first: {x: -10, y: -5, z: 0}
     second:
       serializedVersion: 2
@@ -2273,6 +2410,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741826
+>>>>>>> parent of ce01eff (PlayerMechanics)
   - first: {x: -10, y: -4, z: 0}
     second:
       serializedVersion: 2
@@ -2494,6 +2632,7 @@ Tilemap:
     e32: 0
     e33: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!61 &1821159161
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2520,6 +2659,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 11.875447, y: 4.971795}
   m_EdgeRadius: 0
+=======
+>>>>>>> parent of ce01eff (PlayerMechanics)
 =======
 >>>>>>> parent of ce01eff (PlayerMechanics)
 --- !u!1 &1952948042
@@ -2819,6 +2960,7 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
     - target: {fileID: 6082576361214200743, guid: ed456433db669974093b05535978ecc9,
         type: 3}
       propertyPath: dead
@@ -2844,6 +2986,8 @@ PrefabInstance:
       propertyPath: boundaryFloor.m_Bits
       value: 256
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of ce01eff (PlayerMechanics)
 =======
 >>>>>>> parent of ce01eff (PlayerMechanics)
     m_RemovedComponents: []

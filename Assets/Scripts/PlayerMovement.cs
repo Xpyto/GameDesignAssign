@@ -15,9 +15,12 @@ public class PlayerMovement : MonoBehaviour
     {
         movePoint.parent = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
         isGrounded = true;
         timeFlow = 1;
         isMoving = false;
+=======
+>>>>>>> parent of ce01eff (PlayerMechanics)
 =======
 >>>>>>> parent of ce01eff (PlayerMechanics)
     }
@@ -25,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         if(!dead){
         if(isMoving){
@@ -45,6 +49,8 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(timeFlow);
 =======
 >>>>>>> parent of ce01eff (PlayerMechanics)
+=======
+>>>>>>> parent of ce01eff (PlayerMechanics)
 
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
 
@@ -58,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
                 if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f,Input.GetAxisRaw("Vertical"), 0f), 0.2f, Boundary)){ 
                 movePoint.position += new Vector3(0f,Input.GetAxisRaw("Vertical"), 0f);
                 }*/
+<<<<<<< HEAD
 <<<<<<< HEAD
             }else{
                 isMoving = false;
@@ -94,6 +101,10 @@ public class PlayerMovement : MonoBehaviour
         if(collider.gameObject.CompareTag("death")){
             dead = true;
         }
+=======
+            }
+        }
+>>>>>>> parent of ce01eff (PlayerMechanics)
 =======
             }
         }
