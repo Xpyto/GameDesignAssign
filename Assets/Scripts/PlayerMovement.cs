@@ -7,30 +7,25 @@ public class PlayerMovement : MonoBehaviour
 
     public float moveSpeed = 2f;    //Movespeed of the player
     public Transform movePoint;     //The point on the grid the player is moving towards
-    [SerializeField] private LayerMask boundaryFloor;      //check if there is a boundary
-    [SerializeField] private LayerMask deathFloor;
-    float timeFlow;
-
-    public bool isMoving;
-
-    public bool isGrounded;
-
-    public bool dead;
+    public LayerMask Boundary;      //check if there is a boundary
 
 
     // Start is called before the first frame update
     void Start()
     {
-        dead = false;
         movePoint.parent = null;
+<<<<<<< HEAD
         isGrounded = true;
         timeFlow = 1;
         isMoving = false;
+=======
+>>>>>>> parent of ce01eff (PlayerMechanics)
     }
 
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         if(!dead){
         if(isMoving){
             if(timeFlow > 0){
@@ -48,20 +43,22 @@ public class PlayerMovement : MonoBehaviour
         
         Debug.Log(isGrounded);
         //Debug.Log(timeFlow);
+=======
+>>>>>>> parent of ce01eff (PlayerMechanics)
 
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
 
-        if(Vector3.Distance(transform.position, movePoint.position) <= 0.01f && isGrounded){
+        if(Vector3.Distance(transform.position, movePoint.position) <= 0.02f){
 
             if(Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f){
-                if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), 0.2f, boundaryFloor)){
+                if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), 0.2f, Boundary)){
                 movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
-                isMoving = true;
                 }
             /*}else if(Input.GetAxisRaw("Vertical")== 1f){
                 if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f,Input.GetAxisRaw("Vertical"), 0f), 0.2f, Boundary)){ 
                 movePoint.position += new Vector3(0f,Input.GetAxisRaw("Vertical"), 0f);
                 }*/
+<<<<<<< HEAD
             }else{
                 isMoving = false;
                 timeFlow = 1;
@@ -97,5 +94,9 @@ public class PlayerMovement : MonoBehaviour
         if(collider.gameObject.CompareTag("death")){
             dead = true;
         }
+=======
+            }
+        }
+>>>>>>> parent of ce01eff (PlayerMechanics)
     }
 }
